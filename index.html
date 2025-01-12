@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<body style="background-color: #1e1e2f; font-family: Arial, sans-serif; color: #f0f0f0; margin: 0; padding: 0;">
+    <div style="background-color: #3a3a55; padding: 15px; text-align: center;">
+        <a href="#home" style="color: #ffffff; margin: 0 20px; text-decoration: none; font-weight: bold;">Home</a>
+        <a href="#about" style="color: #ffffff; margin: 0 20px; text-decoration: none; font-weight: bold;">About</a>
+        <a href="#projects" style="color: #ffffff; margin: 0 20px; text-decoration: none; font-weight: bold;">Projects</a>
+        <a href="#contact" style="color: #ffffff; margin: 0 20px; text-decoration: none; font-weight: bold;">Contact</a>
+    </div>
+    <div id="home" style="padding: 30px;">
+        <h1 style="color: #ffcc70;">Welcome to My Page</h1>
+        <p>Feel free to explore my website and learn more about my projects and skills.</p>
+    </div>
+    <div id="about" style="padding: 30px;">
+        <h1 style="color: #ffcc70;">About Me</h1>
+        <p>
+            Hi, I'm <strong>Vajran Kannadasan</strong>. I am currently pursuing my second year in 
+            <strong>BTech in Computer Science Engineering with specialization in Internet of Things</strong>.
+        </p>
+        <p>
+            <strong>Skills & Interests:</strong>
+            <ul>
+                <li>Programming Languages: Java, Python, C, C++</li>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>Problem Solving and Algorithm Design</li>
+            </ul>
+        </p>
+        <p>
+            I'm always excited to collaborate on projects, learn new things, and share knowledge with others.
+        </p>
+    </div>
+    <main id="projects" style="padding: 20px;">
+        <h2 style="color: #ffcc70;">Projects I Have Worked On</h2>
+        
+        <div style="display: flex; align-items: center; background-color: rgba(255, 255, 255, 0.1); color: white; padding: 20px; border-radius: 20px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 25px; width: 100%; justify-content: center;">
+                <figure style="flex: 1 1 calc(33.33% - 15px); max-width: 30%; height: 450px; text-align: center; margin: 0; background-color: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 10px;">
+                    <a href="solar/solar System.html">
+                        <img src="sola.png" alt="Solar System Project" style="width: 100%; height: 75%; object-fit: cover; border-radius: 8px;">
+                    </a>
+                    <figcaption style="color: #f8f8f8; height: 25%; display: flex; align-items: center; justify-content: center;">A webpage detailing the planets in the Solar System</figcaption>
+                </figure>
+                <figure style="flex: 1 1 calc(33.33% - 15px); max-width: 30%; height: 450px; text-align: center; margin: 0; background-color: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 10px;">
+                    <a href="prof/profile.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ZqivCNC7yvJqthqZOVvxSjDLyDxtai-cbQ&s" alt="Profile Project" style="width: 100%; height: 75%; object-fit: cover; border-radius: 8px;">
+                    </a>
+                    <figcaption style="color: #f8f8f8; height: 25%; display: flex; align-items: center; justify-content: center;">A webpage showcasing the user's profile</figcaption>
+                </figure>
+                <figure style="flex: 1 1 calc(33.33% - 15px); max-width: 30%; height: 450px; text-align: center; margin: 0; background-color: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 10px;">
+                    <a href="form/form.html">
+                        <img src="form/pr.png" alt="Form Project" style="width: 100%; height: 75%; object-fit: cover; border-radius: 8px;">
+                    </a>
+                    <figcaption style="color: #f8f8f8; height: 25%; display: flex; align-items: center; justify-content: center;">A webpage demonstrating a form submission project</figcaption>
+                </figure>
+            </div>
+        </div>     
+    </main>
+    <div style="padding: 20px; margin-top: 30px;">
+        <h2 style="color: #ffcc70;">Leave Your Feedback</h2>
+        <form action="submit_feedback.html" method="get" style="display: inline-block; text-align: left;">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Your Name:</label>
+                <input type="text" id="name" name="name" style="padding: 8px; color: black; background-color: rgb(246, 246, 246);" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="feedback" style="display: block; margin-bottom: 5px;">Your Feedback:</label>
+                <input type="text" id="feedback" name="feedback" style="padding: 8px; color: black; background-color: rgb(246, 246, 246);" required>
+            </div>
+            <div>
+                <button type="submit" style="background-color: #343536; color: white; padding: 5px 5px; border: none; cursor: pointer;">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+    <div id="contact" style="padding: 15px; background-color: #3a3a55; margin-top: 30px;">
+        <p style="text-align: center;">
+            Contact: 
+            <a href="mailto:vajran.2023@vitstudent.ac.in" style="color: #ffcc70;">Email</a> |
+            <a href="https://www.instagram.com/_spidey_2006/profilecard/?igsh=MmVpbno4dXR1bmRo" style="color: #ffcc70;">Instagram</a> |
+            <a href="https://www.linkedin.com/in/vajran-k-07736028b" style="color: #ffcc70;">LinkedIn</a> |
+            <a href="https://github.com/Vajran-K" style="color: #ffcc70;">GitHub</a>
+        </p>
+    </div>
+
+</body>
+</html>

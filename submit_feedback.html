@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Submitted</title>
+</head>
+<body style="background-color: #1e1e2f; font-family: Arial, sans-serif; color: #f0f0f0; padding: 30px;">
+    <div style="background-color: #3a3a55; padding: 15px; text-align: center;">
+        <h1 style="color: #ffcc70;">Thank You for Your Feedback!</h1>
+        <p style="color: #ffffff;">We appreciate your input and will get back to you if necessary.</p>
+    </div>
+    <div style="padding: 20px; background-color: #2b2b3d; margin-top: 30px;">
+        <h2 style="color: #ffcc70;">Feedback Details</h2>
+        
+        <p style="color: #ffffff;"><strong>Your Name:</strong> <span id="name">Loading...</span></p>
+        <p style="color: #ffffff;"><strong>Your Feedback:</strong> <span id="feedback">Loading...</span></p>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const userName = urlParams.get('name') || 'No name provided';
+            const userFeedback = urlParams.get('feedback') || 'No feedback provided';
+            document.getElementById('name').textContent = userName;
+            document.getElementById('feedback').textContent = userFeedback;
+        </script>
+    </div>
+    <div style="padding: 20px; margin-top: 30px; text-align: center;">
+        <a href="index.html" style="color: #ffcc70; text-decoration: none;">Go Back to About Me</a>
+    </div>
+
+</body>
+</html>
