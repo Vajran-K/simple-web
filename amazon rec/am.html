@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Amazon Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            height: 40px;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            background-color: #0e1923;
+            color: white;
+        }
+
+        .header-left,
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        .search-bar-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+            background-color: white;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .dropdown {
+            border: none;
+            background: #f3f3f3;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .search-input {
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            flex-grow: 1;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #ff9900;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .search-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .lang {
+            border: none;
+            background-color: #0e1923;
+            color: white;
+            font-size: 14px;
+            margin-left: 20px;
+            width: 50px;
+        }
+
+        .let {
+            margin-left: auto;
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .acc-drop {
+            border: none;
+            background-color: #0e1923;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #232f3e;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            color: black;
+        }
+
+        nav select {
+            color: white;
+            background-color: #232f3e;
+            height: 30px;
+            font-size: 14px;
+            border-style: none;
+            margin-right: 20px;
+        }
+
+        .bestsellers-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .bestsellers-section h1 {
+            margin-bottom: 10px;
+        }
+
+        .bestsellers-nav {
+            display: flex;
+            gap: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+        .bestsellers-nav a {
+            color: #007185;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 15%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #007185;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 75%;
+        }
+
+        .product {
+            width: 325px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #232f3e;
+        }
+
+        .product-rating {
+            font-size: 14px;
+            color: #f08804;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #B12704;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="ama.png" alt="Amazon Logo" height="50px" width="150px">
+            </div>
+            <div class="location">
+                <img src="loc.png" alt="Location" height="20px" width="20px">
+                <p>Deliver to Vellore 632007<br><strong>Update location</strong></p>
+            </div>
+        </div>
+
+        <div class="search-bar-container">
+            <select class="dropdown">
+                <option value="all">All</option>
+                <option value="books">Books</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+            </select>
+            <input type="text" class="search-input" placeholder="Search Amazon.in">
+            <button class="search-button">
+                <img src="icon.png" alt="Search" class="search-icon">
+            </button>
+        </div>
+
+        <div class="header-right">
+            <select class="lang">
+                <option value="english">En</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+            </select>
+            <div class="let">
+                <p> &nbsp;Hello, sign in<br>
+                    <select class="acc-drop">
+                        <option value="Account & Lists">Account & Lists</option>
+                        <option value="sign in">Sign In</option>
+                        <option value="orders">Orders</option>
+                        <option value="cart">Cart</option>
+                    </select>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <select>
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="fashion">Fashion</option>
+            <option value="books">Books</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Mobiles">Mobiles</option>
+            <option value="shoes">Shoes</option>
+        </select>
+        <a href="#">Electronics</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Mobiles</a>
+        <a href="#">Today's Deals</a>
+    </nav>
+
+    <div class="bestsellers-section">
+        <div class="bestsellers-nav">
+            <a href="#">Bestsellers</a>
+            <a href="#">Hot New Releases</a>
+        </div>
+        <h1>Amazon Bestsellers</h1>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="sidebar">
+            <h3>Any Department</h3>
+            <ul>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Computers & Accessories</a></li>
+                <li><a href="#">Electronics</a></li>
+            </ul>
+        </div>
+
+        <div class="products-container">
+            <div class="product">
+                <img src="realme.png" alt="Realme Narzo 70x">
+                <p class="product-title">realme NARZO 70x 5G (Ice Blue, 6GB RAM, 128GB Storage)</p>
+                <p class="product-rating">4.5 stars 4,397</p>
+                <p class="product-price">&#8377;10,749.00</p>
+            </div>
+
+            <div class="product">
+                <img src="boat.png" alt="Boat Rockerz">
+                <p class="product-title">boAt Rockerz 255 Pro+ (60HRS Battery, Fast Charge, IPX7)</p>
+                <p class="product-rating">4.0 stars 206,151</p>
+                <p class="product-price">&#8377;999.00</p>
+            </div>
+
+            <div class="product">
+                <img src="apple.png" alt="Apple Adapter">
+                <p class="product-title">Apple 20W USB-C Power Adapter</p>
+                <p class="product-rating">3.5 stars 2,596</p>
+                <p class="product-price">&#8377;1,549.00</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Amazon. All rights reserved.</p>
+    </footer>
+</body>
+</html>
