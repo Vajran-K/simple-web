@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Amazon Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Deals</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             min-height: 100vh;
             flex-direction: column;
-            background-color: #f3f3f3;
+            background-color: #f5f5f5;
         }
 
         header {
             display: flex;
-            height: 60px;
+            height: 40px;
             justify-content: space-between;
             padding: 10px 20px;
             align-items: center;
             background-color: #0e1923;
             color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .header-left,
@@ -31,7 +31,7 @@
             align-items: center;
         }
 
-        .logo img {
+        .logo {
             margin-right: 20px;
         }
 
@@ -52,7 +52,6 @@
             background-color: white;
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .dropdown {
@@ -76,11 +75,6 @@
             border: none;
             padding: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .search-button:hover {
-            background-color: #e68a00;
         }
 
         .search-icon {
@@ -119,14 +113,12 @@
             background-color: #232f3e;
             color: white;
             padding: 10px 20px;
-            overflow-x: auto;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             padding: 8px 20px;
-            transition: background-color 0.3s, color 0.3s;
         }
 
         nav a:hover {
@@ -170,61 +162,20 @@
             font-size: 14px;
         }
 
-
-        .content-wrapper {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 100%;
-            padding: 20px;
-        }
-
-        .sidebar {
-            width: 15%;
-            padding: 20px;
-            margin-right: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: white;
-            height: 100vh;
-            position: sticky;
-            top: 0;
-        }
-
-        .sidebar h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 10px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #007185;
-        }
-
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
         .products-container {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
-            width: 75%;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
 
         .product {
-            width: 325px;
+            width: 300px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             background-color: white;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -238,8 +189,8 @@
         }
 
         .product-title {
-            font-size: 14px;
-            margin: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
             color: #232f3e;
             font-weight: bold;
         }
@@ -247,18 +198,19 @@
         .product-rating {
             font-size: 14px;
             color: #f08804;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .product-price {
-            font-size: 16px;
+            font-size: 18px;
             color: #B12704;
             font-weight: bold;
-            margin-top: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+
     <header>
         <div class="header-left">
             <div class="logo">
@@ -324,61 +276,29 @@
             <a href="am.html">Bestsellers</a>
             <a href="#">Hot New Releases</a>
         </div>
-        <h1>Amazon Bestsellers</h1>
+        <h1>Amazon Today's Deals</h1>
     </div>
 
-    <div class="content-wrapper">
-        <div class="sidebar">
-            <h3>Any Department</h3>
-            <ul>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="comp.html">Computers & Accessories</a></li>
-                <li><a href="electronics.html">Electronics</a></li>
-            </ul>
+    <div class="products-container">
+        <div class="product">
+            <img src="zeb.png" alt="ZEBRONICS">
+            <p class="product-title">ZEBRONICS Zeb-Jaguar Wireless Mouse, 2.4GHz with USB Nano Receiver, High Precision Optical Tracking, 4 Buttons, Plug & Play, Ambidextrous, for PC/Mac/Laptop (Black+Grey)                </p>
+            <p class="product-rating">4.0 stars 2,596</p>
+            <p class="product-price">&#8377;259.00</p>
         </div>
 
-        <div class="products-container">
-            <div class="product">
-                <img src="realme.png" alt="Realme Narzo 70x">
-                <p class="product-title">realme NARZO 70x 5G (Ice Blue, 6GB RAM, 128GB Storage)</p>
-                <p class="product-rating">4.5 stars 4,397</p>
-                <p class="product-price">&#8377;10,749.00</p>
-            </div>
+        <div class="product">
+            <img src="lg tv.png" alt="LG TV">
+            <p class="product-title">LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)</p>
+            <p class="product-rating">3.5 stars 3,596</p>
+            <p class="product-price">&#8377;50,949.00</p>
+        </div>
 
-            <div class="product">
-                <img src="apple.png" alt="Apple Adapter">
-                <p class="product-title">Apple 20W USB-C Power Adapter</p>
-                <p class="product-rating">3.5 stars 2,596</p>
-                <p class="product-price">&#8377;1,549.00</p>
-            </div>
-
-            <div class="product">
-                <img src="boat.png" alt="Boat Rockerz">
-                <p class="product-title">boAt Rockerz 255 Pro+ (60HRS Battery, Fast Charge, IPX7)</p>
-                <p class="product-rating">4.0 stars 206,151</p>
-                <p class="product-price">&#8377;999.00</p>
-            </div>
-
-            <div class="product">
-                <img src="iqoo.png" alt="Apple Adapter" >
-                <p class="product-title">iQOO Z9s 5G (Onyx Green, 8GB RAM, 128GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light</p>
-                <p class="product-rating">4.5 stars 2,006</p>
-                <p class="product-price">&#8377;25,549.00</p>
-            </div>
-
-            <div class="product">
-                <img src="lg tv.png" alt="Apple Adapter">
-                <p class="product-title">LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)</p>
-                <p class="product-rating">3.5 stars 3,596</p>
-                <p class="product-price">&#8377;50,949.00</p>
-            </div>
-
-            <div class="product">
-                <img src="zeb.png" alt="Apple Adapter">
-                <p class="product-title">ZEBRONICS Zeb-Jaguar Wireless Mouse, 2.4GHz with USB Nano Receiver, High Precision Optical Tracking, 4 Buttons, Plug & Play, Ambidextrous, for PC/Mac/Laptop (Black+Grey)                </p>
-                <p class="product-rating">4.0 stars 2,596</p>
-                <p class="product-price">&#8377;259.00</p>
-            </div>
+        <div class="product">
+            <img src="on1.png" alt="OnePlus">
+            <p class="product-title">OnePlus Nord CE4 Lite 5G (Super Silver, 8GB RAM, 128GB Storage)</p>
+            <p class="product-rating">4.5 stars 42,397</p>
+            <p class="product-price">&#8377;18,749.00</p>
         </div>
     </div>
 </body>

@@ -11,16 +11,18 @@
             display: flex;
             min-height: 100vh;
             flex-direction: column;
+            background-color: #f3f3f3;
         }
 
         header {
             display: flex;
-            height: 40px;
+            height: 60px;
             justify-content: space-between;
             padding: 10px 20px;
             align-items: center;
             background-color: #0e1923;
             color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .header-left,
@@ -29,7 +31,7 @@
             align-items: center;
         }
 
-        .logo {
+        .logo img {
             margin-right: 20px;
         }
 
@@ -50,6 +52,7 @@
             background-color: white;
             border-radius: 4px;
             overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .dropdown {
@@ -73,6 +76,11 @@
             border: none;
             padding: 10px;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: #e68a00;
         }
 
         .search-icon {
@@ -104,16 +112,6 @@
             cursor: pointer;
         }
 
-        footer {
-            background-color: #232f3e;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-            width: 100%;
-            margin-top: auto;
-        }
-
         nav {
             display: flex;
             justify-content: flex-start;
@@ -121,12 +119,14 @@
             background-color: #232f3e;
             color: white;
             padding: 10px 20px;
+            overflow-x: auto;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             padding: 8px 20px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         nav a:hover {
@@ -147,13 +147,18 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 10px;
-            width: 100%;
+            padding: 20px;
+            width: 97.6%;
             border-radius: 5px;
+            background-color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .bestsellers-section h1 {
             margin-bottom: 10px;
+            font-size: 24px;
+            color: #232f3e;
         }
 
         .bestsellers-nav {
@@ -181,6 +186,7 @@
         .sidebar {
             width: 15%;
             padding: 20px;
+            margin-right: auto;
             border: 1px solid #ddd;
             border-radius: 5px;
             background-color: white;
@@ -211,7 +217,6 @@
         .sidebar ul li a:hover {
             text-decoration: underline;
         }
-
         .products-container {
             display: flex;
             flex-wrap: wrap;
@@ -226,6 +231,7 @@
             padding: 10px;
             text-align: center;
             background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .product img {
@@ -239,6 +245,7 @@
             font-size: 14px;
             margin: 5px 0;
             color: #232f3e;
+            font-weight: bold;
         }
 
         .product-rating {
@@ -310,15 +317,15 @@
             <option value="Mobiles">Mobiles</option>
             <option value="shoes">Shoes</option>
         </select>
-        <a href="#">Electronics</a>
-        <a href="#">Best Sellers</a>
+        <a href="electronics.html">Electronics</a>
+        <a href="am.html">Best Sellers</a>
         <a href="#">Mobiles</a>
         <a href="#">Today's Deals</a>
     </nav>
 
     <div class="bestsellers-section">
         <div class="bestsellers-nav">
-            <a href="#">Bestsellers</a>
+            <a href="am.html">Bestsellers</a>
             <a href="#">Hot New Releases</a>
         </div>
         <h1>Amazon Bestsellers</h1>
@@ -343,6 +350,13 @@
             </div>
 
             <div class="product">
+                <img src="apple.png" alt="Apple Adapter">
+                <p class="product-title">Apple 20W USB-C Power Adapter</p>
+                <p class="product-rating">3.5 stars 2,596</p>
+                <p class="product-price">&#8377;1,549.00</p>
+            </div>
+
+            <div class="product">
                 <img src="boat.png" alt="Boat Rockerz">
                 <p class="product-title">boAt Rockerz 255 Pro+ (60HRS Battery, Fast Charge, IPX7)</p>
                 <p class="product-rating">4.0 stars 206,151</p>
@@ -350,16 +364,26 @@
             </div>
 
             <div class="product">
-                <img src="apple.png" alt="Apple Adapter">
-                <p class="product-title">Apple 20W USB-C Power Adapter</p>
-                <p class="product-rating">3.5 stars 2,596</p>
-                <p class="product-price">&#8377;1,549.00</p>
+                <img src="iqoo.png" alt="Apple Adapter" >
+                <p class="product-title">iQOO Z9s 5G (Onyx Green, 8GB RAM, 128GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light</p>
+                <p class="product-rating">4.5 stars 2,006</p>
+                <p class="product-price">&#8377;25,549.00</p>
+            </div>
+
+            <div class="product">
+                <img src="lg tv.png" alt="Apple Adapter">
+                <p class="product-title">LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)</p>
+                <p class="product-rating">3.5 stars 3,596</p>
+                <p class="product-price">&#8377;50,949.00</p>
+            </div>
+
+            <div class="product">
+                <img src="zeb.png" alt="Apple Adapter">
+                <p class="product-title">ZEBRONICS Zeb-Jaguar Wireless Mouse, 2.4GHz with USB Nano Receiver, High Precision Optical Tracking, 4 Buttons, Plug & Play, Ambidextrous, for PC/Mac/Laptop (Black+Grey)                </p>
+                <p class="product-rating">4.0 stars 2,596</p>
+                <p class="product-price">&#8377;259.00</p>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2023 Amazon. All rights reserved.</p>
-    </footer>
 </body>
 </html>
